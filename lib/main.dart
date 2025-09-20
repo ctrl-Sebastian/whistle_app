@@ -27,6 +27,7 @@ class _WhistleAppState extends State<WhistleApp> {
 
     return MaterialApp(
       home: Scaffold(
+        backgroundColor: Colors.brown[400],
         appBar: AppBar(
           title: Text(
             "Whistle App",
@@ -40,7 +41,11 @@ class _WhistleAppState extends State<WhistleApp> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               IconButton(
-                icon: Icon(Icons.volume_up_rounded, size: 200.0),
+                icon: Icon(
+                  Icons.volume_up_rounded,
+                  size: 200.0,
+                  color: Colors.white,
+                ),
                 onPressed: () {
                   playSound(
                     audioPlayer: audioPlayer,
@@ -49,7 +54,7 @@ class _WhistleAppState extends State<WhistleApp> {
                 },
               ),
               IconButton(
-                icon: Icon(Icons.pets, size: 200.0),
+                icon: Icon(Icons.pets, size: 200.0, color: Colors.white),
                 onPressed: () {
                   playSound(
                     audioPlayer: audioPlayer,
@@ -58,13 +63,25 @@ class _WhistleAppState extends State<WhistleApp> {
                 },
               ),
               IconButton(
-                icon: Icon(Icons.sports, size: 200.0),
+                icon: Icon(Icons.sports, size: 200.0, color: Colors.white),
                 onPressed: () {
                   playSound(
                     audioPlayer: audioPlayer,
                     soundFile: "sounds/referee_whistle.mp3",
                   );
                 },
+              ),
+              Text(
+                "Tap an icon to play a sound!",
+                style: TextStyle(
+                  color: Colors.yellow[600],
+                  fontSize: 24.0,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              Text(
+                "Done with ❤️ by Sebastian De Leon",
+                style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
               ),
             ],
           ),
